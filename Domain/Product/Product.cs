@@ -1,6 +1,6 @@
 ﻿namespace LojaMVC.Domain.Product;
 
-public class Product : Entity
+public class Product :  Entity
 {
     public string Name { get; set; }
 
@@ -13,5 +13,6 @@ public class Product : Entity
     public bool HasStock { get; set; }
 
     public bool Active { get; set; }
+
 
 }

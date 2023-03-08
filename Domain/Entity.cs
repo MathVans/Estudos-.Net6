@@ -1,6 +1,8 @@
-﻿namespace LojaMVC.Domain;
+﻿using Flunt.Notifications;
 
-public abstract class Entity
+namespace LojaMVC.Domain;
+
+public abstract class Entity : Notifiable<Notification>
 {
  
     public Guid Id { get; set; }
