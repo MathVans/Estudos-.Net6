@@ -12,12 +12,12 @@ public class CategoryPost
 
         public static IResult Action(CategoryRequest categoryRequest, ApplicationDbContext context)
     {
- 
-        
-        var category = new Category(categoryRequest.Name) {
-            CreatedBy = categoryRequest.CreatedBy
 
-        };
+
+        var category = new Category(categoryRequest.Name,
+                                    categoryRequest.CreatedBy,
+                                    categoryRequest.EditedBy
+                                                            );
 
         if (!category.IsValid)
         {
