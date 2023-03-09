@@ -21,7 +21,7 @@ public class CategoryPost
 
         if (!category.IsValid)
         {
-            return Results.BadRequest(category.Notifications);
+            return Results.ValidationProblem(category.Notifications.ConvertProblemDetails());
         }
 
         context.Categories.Add(category);
